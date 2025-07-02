@@ -20,7 +20,7 @@ export default function App() {
           {['Home'].map(link => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={`https://www.talview.com/en/`}
               className="relative hover:text-gray-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-white after:transition-all"
             >
               {link}
@@ -47,7 +47,6 @@ export default function App() {
           </a>
         </section>
 
-        {/* Solutions Section */}
         <section id="solutions" className="pt-10 pb-16 px-4 sm:px-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Our Solutions</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
@@ -72,7 +71,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* About Section */}
         <section id="about" className="py-16 px-4 sm:px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 relative">
@@ -94,7 +92,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Careers Section */}
+       
         <section id="careers" className="py-16 px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 relative inline-block">
@@ -113,7 +111,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact Section */}
+       
         <section id="contact" className="py-16 px-4 sm:px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 relative inline-block">
@@ -135,7 +133,7 @@ export default function App() {
         </section>
       </main>
 
-      {/* Footer */}
+    
       <Footer />
     </div>
   );
