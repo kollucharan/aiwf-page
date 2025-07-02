@@ -2,10 +2,10 @@ import React from 'react';
 import Footer from './Footer/footer';
 
 const solutions = [
-  { title: 'Remote Proctoring', desc: 'Secure, scalable AI & human‑in‑loop exam monitoring.', icon: '🛡️' },
-  { title: 'AI Exam Agents', desc: 'Automated proctoring, interviewing & evaluations.', icon: '🤖' },
-  { title: 'Integrity & Verification', desc: 'Real‑time identity checks & fraud detection.', icon: '🔍' },
-  { title: 'Engineering Support', desc: 'Integration, optimization & global delivery.', icon: '⚙️' },
+  { title: 'Remote Proctoring', desc: 'Secure, scalable AI & human‑in‑loop exam monitoring.', icon: '🛡️',url:'https://www.talview.com/en/online-proctoring-software' },
+  { title: 'AI Exam Agents', desc: 'Automated proctoring, interviewing & evaluations.', icon: '🤖' ,url:'https://www.talview.com/en/alvy-ai-proctoring-agent'},
+  { title: 'Integrity & Verification', desc: 'Real‑time identity checks & fraud detection.', icon: '🔍',url:'https://www.talview.com/en/id-verification' },
+  { title: 'Engineering Support', desc: 'Integration, optimization & global delivery.', icon: '⚙️',url :'https://talview.freshdesk.com/support/home' },
 ];
 
 export default function App() {
@@ -29,9 +29,9 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Main Background Gradient */}
+     
       <main className="flex-grow bg-fixed bg-gradient-to-br from-white via-blue-50 to-purple-50">
-        {/* Hero Section */}
+      
         <section id="home" className="flex flex-col items-center justify-center text-gray-900 pt-16 sm:pt-32 pb-10 px-4 sm:px-6">
           <h2 className="text-2xl sm:text-4xl font-extrabold mb-6 text-center">Welcome to AIWF</h2>
 
@@ -50,18 +50,18 @@ export default function App() {
         <section id="solutions" className="pt-10 pb-16 px-4 sm:px-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Our Solutions</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
-            {solutions.map(({ title, desc, icon }) => (
+            {solutions.map(({ title, desc, icon ,url}) => (
               <div
                 key={title}
                 className="relative flex flex-col items-start bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1 w-full"
-                style={{ minHeight: '350px' }}
+                style={{ minHeight: '250px' }}
               >
                 <div className="text-4xl mb-4 text-indigo-500">{icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{title}</h3>
                 <p className="text-base flex-grow mb-6">{desc}</p>
 
                 <a
-                  href={`#${title.toLowerCase().replace(/\s/g, '')}`}
+                  href={url} target='_blank'
                   className="mt-auto inline-flex items-center text-indigo-600 font-medium hover:underline text-base"
                 >
                   Learn more →
