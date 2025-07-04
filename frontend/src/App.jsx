@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './Footer/footer';
+import headerlogo from '../src/assets/images/Talviewlogo.png'
 
 const solutions = [
   { title: 'Remote Proctoring', desc: 'Secure, scalable AI & human‑in‑loop exam monitoring.', icon: '🛡️',url:'https://www.talview.com/en/online-proctoring-software' },
@@ -9,25 +10,38 @@ const solutions = [
 ];
 
 export default function App() {
+
+ const handleLogoClick =()=>{
+   window.open("https://www.talview.com/en/", "_blank");
+ }
+
+
   return (
     <div className="min-h-screen flex flex-col text-gray-800 overflow-x-hidden">
-      {/* Header */}
-      <header className="h-20 bg-blue-600 shadow-lg px-4 sm:px-8 flex items-center justify-between text-white">
-        <div className="flex items-center space-x-4">
-          {/* Logo or other elements can be added here */}
-        </div>
-        <nav className="space-x-4 sm:space-x-8 text-base sm:text-lg">
-          {['Home'].map(link => (
-            <a
-              key={link}
-              href={`https://www.talview.com/en/`}
-              className="relative hover:text-gray-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-white after:transition-all"
-            >
-              {link}
-            </a>
-          ))}
-        </nav>
-      </header>
+    
+      <header className="h-[72px] sm:h-20 bg-blue-600 shadow-md px-3 sm:px-6 lg:px-10 flex items-center justify-between text-white w-full">
+  <div className="flex items-center space-x-2 sm:space-x-3">
+    <img
+      src={headerlogo}
+      alt="Talview logo"
+      className="h-12 sm:h-[52px] w-auto cursor-pointer"
+      onClick={handleLogoClick}
+    />
+  </div>
+  <nav className="flex space-x-3 sm:space-x-6 text-sm sm:text-base md:text-lg">
+    {['Home'].map(link => (
+      <a
+        key={link}
+        href={`https://www.talview.com/en/`}
+        className="relative hover:text-gray-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-white after:transition-all"
+      >
+        {link}
+      </a>
+    ))}
+  </nav>
+</header>
+
+
 
      
       <main className="flex-grow bg-fixed bg-gradient-to-br from-white via-blue-50 to-purple-50">
